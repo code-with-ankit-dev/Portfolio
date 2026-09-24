@@ -39,3 +39,4 @@ TaskList.addEventListener("click",function(event){
     // Remove from page 
     event.target.remove();
 });
+

@@ -1,8 +1,7 @@
 let todoInput = document.getElementById("todoInput");
 let addBtn = document.getElementById("addBtn");
 let todoList = document.getElementById("todoList");
-let tasks=[];
-
+let tasks =[];
 // ===== LOAD:runs once when page open ====
 let savedTasks=localStorage.getItem("tasks");
 if(savedTasks){
@@ -19,10 +18,22 @@ addBtn.addEventListener("click",function(event){
    tasks.push(userTask);
 localStorage.setItem("tasks",JSON.stringify(tasks));
    let newTask = document.createElement("li");
-   newTask .textContent=userTask;
+   newTask.textContent=userTask;
+   let deletebtn=document.createElement("button");
+   deletebtn.textContent="Delete";
+   newTask.appendChild(deletebtn);
    todoList.appendChild(newTask);
    todoInput.value="";
 });
-todoList.addEventListener("click",function(event){
-   event.target.remove();
+todoList.addEventListener("click",function(e){
+   if(e.target.tagName==="BUTTON"){
+      let li=e.target.parentElement;
+      let taskText=li.firstChild.textContent;
+
+      tasks=tasks.filter(function(task){
+         return task!==taskText;
+      });
+      localStorage.setItem("tasks",JSON.stringify(tasks));
+      li.remove();
+   }
 });
