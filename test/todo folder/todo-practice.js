@@ -11,8 +11,7 @@ if(savedTasks){
       newTask.textContent=tasks[i];
       todoList.appendChild(newTask);
    }
-}
-
+};
 addBtn.addEventListener("click",function(event){
    let userTask= todoInput.value;
    tasks.push(userTask);
