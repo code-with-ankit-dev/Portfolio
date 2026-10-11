@@ -1,0 +1,14 @@
+postBtn.addEventListener("click", function(){
+    let userComment = commentInput.value;
+    let newComment = document.createElement("p");
+    newComment.textContent = userComment;
+
+    let deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "❌";
+    deleteBtn.onclick=function(){
+        newComment.remove()
+    };
+   commentList.appendChild(newComment);
+    comments.push(userComment);
+    localStorage.setItem("comments", JSON.stringify(comments));
+});
