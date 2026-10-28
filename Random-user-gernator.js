@@ -21,4 +21,4 @@ try{
 Name.textContent="user not found"
 }
 }
-Btn.addEventListener("click",getRandomuser);
+Btn.addEventListener("click",getRandomuser); 

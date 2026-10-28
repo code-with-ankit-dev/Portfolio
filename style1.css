@@ -1,0 +1,15 @@
+body{
+    background:linear-gradient(135deg,#e0e7ff,#c7d2fe);
+    min-height: 1000vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial,sans-serif;
+}
+h1{
+    font-size: 120px;
+    color: #1e40af;
+    margin: 0 0 20px 0;
+    font-weight: bold;
+}
