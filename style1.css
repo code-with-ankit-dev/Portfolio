@@ -1,6 +1,6 @@
 body{
     background:linear-gradient(135deg,#e0e7ff,#c7d2fe);
-    min-height: 1000vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,4 +12,23 @@ h1{
     color: #1e40af;
     margin: 0 0 20px 0;
     font-weight: bold;
+}
+button {
+    padding: 15px 40px;
+    font-size: 20px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e40af;
+}
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
 }
